@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-namespace DesignPatterns\Creational\AbstractFactory\Tests;
-
 use DesignPatterns\Creational\AbstractFactory\CsvWriter;
 use DesignPatterns\Creational\AbstractFactory\JsonWriter;
 use DesignPatterns\Creational\AbstractFactory\UnixWriterFactory;
@@ -13,7 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
 {
-    public function provideFactory()
+    public function provideFactory(): array
     {
         return [
             [new UnixWriterFactory()],
