@@ -11,20 +11,20 @@ use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
 {
-    public function provideFactory(): array
-    {
-        return [
-            [new UnixWriterFactory()],
-            [new WinWriterFactory()]
-        ];
-    }
+    // public function provideFactory(): array
+    // {
+    //     return [
+    //         [new UnixWriterFactory()],
+    //         [new WinWriterFactory()]
+    //     ];
+    // }
 
-    /**
-     * @dataProvider provideFactory
-     */
-    public function testCanCreateCsvWriterOnUnix(WriterFactory $writerFactory)
-    {
-        $this->assertInstanceOf(JsonWriter::class, $writerFactory->createJsonWriter());
-        $this->assertInstanceOf(CsvWriter::class, $writerFactory->createCsvWriter());
-    }
+    // /**
+    //  * @dataProvider provideFactory
+    //  */
+    // public function testCanCreateCsvWriterOnUnix(WriterFactory $writerFactory)
+    // {
+    //     $this->assertInstanceOf(JsonWriter::class, $writerFactory->createJsonWriter());
+    //     $this->assertInstanceOf(CsvWriter::class, $writerFactory->createCsvWriter());
+    // }
 }
